@@ -1,0 +1,11 @@
+[package]
+name = "rust_practice"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+members = ["leetcode", "neetcode"]
+
+[dependencies]
+leetcode = { path = "leetcode" }
+neetcode = { path = "neetcode" }
