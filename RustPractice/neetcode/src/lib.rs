@@ -12,6 +12,7 @@ pub mod evaluate_reverse_polish_notation;
 pub mod invert_binary_tree;
 pub mod koko_eating_bananas;
 pub mod longest_substring_without_repeating_characters;
+pub mod lowest_comman_ancestor_in_binary_search_tree;
 pub mod maximum_depth_of_binary_tree;
 pub mod merge_two_sorted_linked_lists;
 pub mod min_cost_climbing_stairs;
