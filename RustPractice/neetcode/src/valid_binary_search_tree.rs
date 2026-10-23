@@ -23,10 +23,10 @@ struct Solution;
 
 impl Solution {
     pub fn is_valid_bst(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-        Self::inner(root, i32::MIN, i32::MAX)
+        Self::validate_dfs(root, i32::MIN, i32::MAX)
     }
 
-    fn inner(root: Option<Rc<RefCell<TreeNode>>>, minimum: i32, maximum: i32) -> bool {
+    fn validate_dfs(root: Option<Rc<RefCell<TreeNode>>>, minimum: i32, maximum: i32) -> bool {
         let Some(node) = root else {
             return true;
         };
@@ -34,7 +34,7 @@ impl Solution {
 
         node.val > minimum
             && node.val < maximum
-            && Self::inner(node.left.clone(), minimum, node.val)
-            && Self::inner(node.right.clone(), node.val, maximum)
+            && Self::validate_dfs(node.left.clone(), minimum, node.val)
+            && Self::validate_dfs(node.right.clone(), node.val, maximum)
     }
 }
